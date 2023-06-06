@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css aqui a baixo -->
     <link rel="stylesheet" href="./style/style.css">
+    
 </head>
 
 <body>
@@ -59,31 +60,49 @@
     <main>
         <!-- inicio da section da home -->
 
-        <section class="inicio" id="inicio">
+        <section class="slides-iniciais">
 
-            <div class="conteudoSlide">
+            <div class="slider">
                 <div class="slides">
-                    <input type="radio" name="slide" id="slide1">
-                    <input type="radio" name="slide" id="slide2">
-                    <input type="radio" name="slide" id="slide3">
-                    <div class="slide-s1">
-                        <img src="./imagens/bannerdesktop2.webp" alt="Rosas 59,90">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+
+                    <div class="foto1">
+                        <img src="./imagens/bannerdesktop2.png" alt="Slide1">
                     </div>
+
                     <div class="slide">
-                        <img src="./imagens/bannerdesktop3.jpg" alt="Flores do campo 59,90">
+                        <img src="./imagens/bannerdesktop3.jpg" alt="slide2">
                     </div>
+
                     <div class="slide">
-                        <img src="./imagens/festival-orquideas1-home.png" alt="Festival das orquideas">
+                        <img src="./imagens/bannerdesktop4.png" alt="slide3">
+                    </div>
+
+
+
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+
+                    <div class="manual-navigation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
                     </div>
 
                 </div>
 
-                <div class="labelsBarrinha">
-                    <label class="bar" for="slide1"></label>
-                    <label class="bar" for="slide2"></label>
-                    <label class="bar" for="slide3"></label>
-                </div>
+
+
             </div>
+
+            </div>
+            
         </section>
 
         <!-- nossas caracteristicas -->
@@ -196,7 +215,11 @@
     <!-- fim do header  -->
 
     <footer>dança gatinho, dança</footer>
+
+    <script src="./script.js"></script>
 </body>
+
+
 
 
 

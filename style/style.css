@@ -3,7 +3,7 @@
 :root {
 
     --border: .2rem solid rgba(0, 0, 0, .1);
-    --outline: 5px solid rgb(87, 11, 169);
+    --outline: 5px solid rgb(202, 202, 194);
     --outline-hover: .2rem solid rgba(0, 255, 47, 0.1);
 }
 
@@ -20,12 +20,26 @@
 
 
 /*  html como um todo estilização */
+
+body {
+    background-image: url(../imagens/Design\ sem\ nome.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
 html {
+
+
+
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
+
+    
 }
+
 
 
 /*  cabeçalho estilização */
@@ -138,12 +152,6 @@ header .fa-bars {
 
 
 
-section {
-    padding: 2rem 9%;
-    display: flex;
-
-
-}
 
 
 /* PAGINAS DAS SECCS  */
@@ -157,110 +165,144 @@ section {
 
 
 
-/*  botao de comprar */
+/* slider */
+
+.slides-iniciais {
+    margin-top: 6%;
+    box-shadow: 1px 1px 10px black;
+    
+
+}
 
 
 
 
+.slides {
 
-
-
-.inicio {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    background: #e2d5d1;
-    min-height: 50vh;
-    text-align: center;
-}
+    
 
-
-/* slides */
-
-.conteudoSlide {
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 13%;
-    left: 0%;
-    max-width: 100%;
-
-}
-
-
-
-.labelsBarrinha {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    cursor: pointer;
-    bottom: 9px;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 60px;
-    transition: 2s;
-
-}
-
-.bar {
-    width: 50px;
-    height: 17px;
-    border: 2px solid rgb(7, 7, 7);
-    margin: 6px;
-    border-radius: 50px;
-}
-
-.bar:hover {
-    background: #1e0e46
 }
 
 .slides input {
     display: none;
-
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    height: 100%;
-
 }
 
 .slide {
-    width: 33%;
-    transition: 0.6s;
 
+    display: flex;
+    
 
 }
 
-.slide img {
+.foto1 {
     width: 100%;
-    height: 100%;
-
-
+    display: flex;
 }
 
-.slide-s1 img {
+.manual-navigation {
+
+    position: absolute;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#slide1:checked~.slide-s1 {
+.manual-btn {
 
+    border: 5px solid rgb(245, 244, 244);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15%;
+    
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+
+    background: #1e0e46;
+}
+
+#radio1:checked ~ .foto1{
     margin-left: 0;
 
-}
-
-#slide2:checked~.slide-s1 {
-
-    margin-left: -34%;
 
 }
 
-#slide3:checked~.slide-s1 {
+#radio2:checked ~ .foto1 {
+    
+    margin-left: -80%;
+    
+}
 
-    margin-left: -67%;
+
+#radio3:checked ~ .foto1 {
+    
+    margin-left: -180%;
+    
+}
+
+
+.navigation-auto div {
+
+    border:  5px solid rgb(253, 253, 253);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s; 
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+} 
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+
+
+
+ #radio1:checked ~ .navigation-auto .auto-btn1{
+
+    background-color: #050505;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+
+    background-color: #000000;
 
 }
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+
+    background-color: #000000;
+ 
+}
+
+   
+
+
+
+
+
+
+
+
+
 
 /* section de caracteristicas  */
 
@@ -273,10 +315,14 @@ section {
 
 
 .caracteristicas {
-    background: #c3b3c3;
+
+
+    background-size: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-top: 2%;
+    
 
 }
 
@@ -284,8 +330,8 @@ section {
 
     color: #1e0e46;
     text-align: center;
-    padding: 2rem 0;
-    padding-bottom: 3rem;
+    
+    
     font-size: 3.4rem;
     margin-bottom: 47px;
 }
@@ -307,7 +353,7 @@ section {
     padding: .8rem 3rem;
     border-radius: .5rem;
     border: .2rem solid black;
-    color: #f5f5f8;
+    color: rgb(234, 234, 236);
     cursor: pointer;
     background: green;
     font-size: 16px;
@@ -324,9 +370,13 @@ section {
 
     display: flex;
     justify-content: center;
-    gap: 65px;
-    margin-top: 130px;
-    
+    gap: 10%;
+    width: 55%;
+    margin-left: 22%;
+    padding: 0.7%;
+
+
+
 
 
 
@@ -335,7 +385,8 @@ section {
 .caracteristicas .box-container .box {
     padding: 70px 1rem;
     margin-top: -20px;
-    background: white;
+    background: transparent;
+    backdrop-filter: blur(8px);
     outline: var(--outline);
     outline-offset: -1rem;
     text-align: center;
@@ -353,6 +404,7 @@ section {
 .caracteristicas .box-container .box:hover {
     outline: var(--outline-hover);
     outline-offset: 0rem;
+    scale: 1.1;
 
 }
 
@@ -376,14 +428,15 @@ section {
 
 .quemsomos {
 
-    background-color: blue;
+    
+
 
     height: 100vh;
 }
 
 
 .produtos {
-    background-color: orange;
+   
     height: 100vh;
 
 
@@ -391,7 +444,7 @@ section {
 
 
 .equipe {
-    background-color: yellow;
+    
     height: 100vh;
 
 }
@@ -399,7 +452,7 @@ section {
 .contato {
     width: 100vw;
     height: 100vh;
-    background-image: url(../imagens/background-contato.jpg);
+
     display: flex;
     flex-direction: row;
     background-position: center;
@@ -504,7 +557,8 @@ form input[type=submit] {
 
 
     html {
-        font-size: 55%
+        font-size: 55%;
+        
     }
 
     header {
